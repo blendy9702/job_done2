@@ -44,7 +44,6 @@ const Index = () => {
     }
   };
 
-
   useEffect(() => {
     justWantLogo();
   }, []);
@@ -77,7 +76,6 @@ const Index = () => {
       </div>
     );
   };
-
 
   // 지역 이름
 
@@ -547,10 +545,16 @@ const Index = () => {
       </div>
       <div className="bg-gradient-to-b from-[#d6d6d6] to-[#ffffff] h-[400px] m-auto">
         <Swiper
+          modules={[Autoplay]}
           spaceBetween={10}
           slidesPerView={10}
           loop={true}
-          autoplay={true}
+          autoplay={{
+            delay: 0,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: false,
+          }}
+          speed={500}
           className="flex justify-center items-center"
         >
           {logo.slice(0, 15).map(item => (
@@ -558,16 +562,23 @@ const Index = () => {
               <img
                 src={`${LOGO_URL}${item.logo}`}
                 alt="로고"
-                className="w-[150px] h-[100px] pointer-events-none"
+                className="w-[100px] h-[100px] rounded-lg shadow-md pointer-events-none my-5 overflow-hidden"
               />
             </SwiperSlide>
           ))}
         </Swiper>
         <Swiper
+          modules={[Autoplay]}
           spaceBetween={10}
           slidesPerView={10}
           loop={true}
-          autoplay={true}
+          autoplay={{
+            delay: 0,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: false,
+            reverseDirection: true,
+          }}
+          speed={500}
           className="flex justify-center items-center"
         >
           {logo.slice(16, 30).map(item => (
@@ -575,7 +586,7 @@ const Index = () => {
               <img
                 src={`${LOGO_URL}${item.logo}`}
                 alt="로고"
-                className="w-[150px] h-[100px] pointer-events-none"
+                className="w-[100px] h-[100px] rounded-lg shadow-md pointer-events-none my-5 overflow-hidden"
               />
             </SwiperSlide>
           ))}

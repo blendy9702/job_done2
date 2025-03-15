@@ -37,8 +37,8 @@ import CompanyInfo from "./pages/expert/company-management/CompanyInfo";
 import EditCompanyInfo from "./pages/expert/company-management/EditCompanyInfo";
 import EditDetailPage from "./pages/expert/company-management/EditDetailPage";
 import ExpertDetailPage from "./pages/expert/company-management/ExpertDetailPage";
-import Portfolio from "./pages/expert/company-management/Portfolio";
 import ExpertPaymentHistory from "./pages/expert/company-management/ExpertPaymentHistory";
+import Portfolio from "./pages/expert/company-management/Portfolio";
 // 예약관리
 import ReservationList from "./pages/expert/reservation-management/Index";
 // 견적관리
@@ -69,7 +69,9 @@ import ContactUs from "./pages/servicepage/ContactUs";
 
 import Maptest from "./Maptest";
 import AdminLayout from "./components/admin/AdminLayout";
+import AdminBusinessInfo from "./components/admin/admin-business-info/AdminBusinessInfo";
 import JobDoneHistory from "./components/papers/JobDoneHistory";
+import AlertTestPage from "./pages/AlertTestPage";
 import OCRUploader from "./pages/OCRUploader";
 import TestSpinner from "./pages/TestSpinner";
 import AdminMain from "./pages/admin/AdminMain";
@@ -82,20 +84,19 @@ import UserReport from "./pages/admin/user/report/UserReport";
 import UserList from "./pages/admin/user/userlist/UserList";
 import OAuth2Handler from "./pages/auth/login/OAuth2Handler";
 import Forum from "./pages/community/Forum";
+import QaDetail from "./pages/community/QaDetail";
 import Write from "./pages/community/Write";
 import CreateDetailPage from "./pages/expert/company-management/CreateDetailPage";
 import CreateOptionPage from "./pages/expert/company-management/CreateOptionPage";
 import EditOptionPage from "./pages/expert/company-management/EditOptionPage";
 import MessageCenter from "./pages/expert/message-center/MessageCenter";
 import UserStatisitcs from "./pages/expert/statistics/UserStatisitcs";
-import AdminBusinessInfo from "./components/admin/admin-business-info/AdminBusinessInfo";
-import AlertTestPage from "./pages/AlertTestPage";
-import QaDetail from "./pages/community/QaDetail";
 
 import ExpertEstimate from "./components/papers/ExpertEstimate";
 import WeatherTest from "./pages/WeatherTest";
 import AdDaysUser from "./pages/admin/statistics/AdDaysUser";
 import AdMonth from "./pages/admin/statistics/AdMonth";
+import KaKaoMaps from "./pages/kakaomap/KaKaoMaps";
 
 function App() {
   return (
@@ -108,6 +109,7 @@ function App() {
         <Route path="/test-spinner" element={<TestSpinner />} />
         <Route path="/alerttest" element={<AlertTestPage />} />
         <Route path="/weathertest" element={<WeatherTest />} />
+        <Route path="/kakaomap2" element={<KaKaoMaps />} />
         <Route element={<Layout />}>
           <Route path="/ocr" element={<OCRUploader />} />
           <Route path="/test" element={<TestPage />} />
